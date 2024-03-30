@@ -6,9 +6,15 @@ import VirtualDOM from './pages/VirtualDOM';
 import Components from './pages/Components';
 import Props from './pages/Props';
 import NotFound from './pages/NotFound';
-
-
-
+import State from './pages/State';
+import LifeCycle from './pages/LifeCycle';
+import Events from './pages/Events';
+import Refs from './pages/Refs';
+import Context from './pages/Context';
+import ReactRouter from './pages/ReactRouter';
+import Forms from './pages/Forms';
+import Storages from './pages/Storages';
+import HOC from './pages/HOC';
 
 
 function App() {
@@ -21,8 +27,17 @@ function App() {
                         <Route path="/virtualDOM" element={<VirtualDOM />} />
                         <Route path="/components" element={<Components />} />
                         <Route path="/props" element={<Props />} />
+                        <Route path="/state" element={<State />} />
+                        <Route path="/lifeCycle" element={<LifeCycle />} />
+                        <Route path="/events" element={<Events />} />
+                        <Route path="/refs,Fragment,key,React.memo,useMemo" element={<Refs />} />
+                        <Route path="/context" element={<Context />} />
+                        <Route path="/react-router" element={<ReactRouter />} />
+                        <Route path="/forms" element={<Forms />} />
+                        <Route path="/storages" element={<Storages />} />
+                        <Route path="/hoc" element={<HOC />} />
+                        <Route path="*" element={<NotFound />} />
                     </Route>
-                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </nav>
         </Box>
