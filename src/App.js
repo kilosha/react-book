@@ -15,32 +15,35 @@ import ReactRouter from './pages/ReactRouter';
 import Forms from './pages/Forms';
 import Storages from './pages/Storages';
 import HOC from './pages/HOC';
+// создать index для pages
 
+import ModeProvider from './providers/ModeProvider.js';
 
 function App() {
-
     return (
-        <Box sx={{ display: 'flex' }}>
-            <nav>
-                <Routes>
-                    <Route path="/" element={<Home />}>
-                        <Route path="/virtualDOM" element={<VirtualDOM />} />
-                        <Route path="/components" element={<Components />} />
-                        <Route path="/props" element={<Props />} />
-                        <Route path="/state" element={<State />} />
-                        <Route path="/lifeCycle" element={<LifeCycle />} />
-                        <Route path="/events" element={<Events />} />
-                        <Route path="/refs,Fragment,key,React.memo,useMemo" element={<Refs />} />
-                        <Route path="/context" element={<Context />} />
-                        <Route path="/react-router" element={<ReactRouter />} />
-                        <Route path="/forms" element={<Forms />} />
-                        <Route path="/storages" element={<Storages />} />
-                        <Route path="/hoc" element={<HOC />} />
-                        <Route path="*" element={<NotFound />} />
-                    </Route>
-                </Routes>
-            </nav>
-        </Box>
+        <ModeProvider>
+            <Box sx={{ display: 'flex' }}>
+                <nav>
+                    <Routes>
+                        <Route path="/" element={<Home />}>
+                            <Route path="/virtualDOM" element={<VirtualDOM />} />
+                            <Route path="/components" element={<Components />} />
+                            <Route path="/props" element={<Props />} />
+                            <Route path="/state" element={<State />} />
+                            <Route path="/lifeCycle" element={<LifeCycle />} />
+                            <Route path="/events" element={<Events />} />
+                            <Route path="/refs,Fragment,key,React.memo,useMemo" element={<Refs />} />
+                            <Route path="/context" element={<Context />} />
+                            <Route path="/react-router" element={<ReactRouter />} />
+                            <Route path="/forms" element={<Forms />} />
+                            <Route path="/storages" element={<Storages />} />
+                            <Route path="/hoc" element={<HOC />} />
+                            <Route path="*" element={<NotFound />} />
+                        </Route>
+                    </Routes>
+                </nav>
+            </Box>
+        </ModeProvider>
     );
 }
 

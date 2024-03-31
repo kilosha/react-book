@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 import NavigationMenu from '../components/NavigationMenu';
 import Header from '../components/Header';
 import PageContent from '../components/PageContent';
-import MyContext from '../contexts/MyContext';
+import SomeContext from '../contexts/SomeContext';
 
 import { styled } from '@mui/material/styles';
 
@@ -28,7 +28,7 @@ const Home = () => {
     };
 
     return (
-        <MyContext.Provider value={{ open, drawerWidth }}>
+        <SomeContext.Provider value={{ open, drawerWidth }}>
             <Header open={open} handleDrawerOpen={handleDrawerOpen} drawerWidth={drawerWidth} />
 
             <NavigationMenu
@@ -37,7 +37,7 @@ const Home = () => {
                 drawerWidth={drawerWidth}
             />
             <PageContent />
-        </MyContext.Provider>
+        </SomeContext.Provider>
     );
 };
 

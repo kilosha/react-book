@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MyContext from '../contexts/MyContext';
+import SomeContext from '../contexts/SomeContext';
 import { Outlet } from 'react-router-dom';
 
 import { styled, useTheme } from '@mui/material/styles';
@@ -34,7 +34,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const PageContent = () => {
     const theme = useTheme();
-    const { open, drawerWidth } = useContext(MyContext);
+    const { open, drawerWidth } = useContext(SomeContext);
 
     return (
         <Main open={open} drawerWidth={drawerWidth} theme={theme}>
