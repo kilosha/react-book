@@ -34,7 +34,8 @@ const Context = () => {
             <Typography paragraph>
                 Сначала мы должны создать контекст с помощью функции `createContext()` из модуля
                 react. В этом примере ниже создается новый контекст с помощью `createContext()` и
-                экспортируется для дальнейшнего использования:
+                экспортируется для дальнейшнего использования (в качестве аргументов можно передать
+                default значения для параметров):
             </Typography>
             <Typography paragraph>
                 <CodeBlock
@@ -47,17 +48,21 @@ export default ModeContext;`}
             </Typography>
 
             <Typography paragraph variant="h6">
-                Шаг 2: Предоставление значения контекста * фрагменты кода, относящиеся конкретно к
-                изменению темы для MUI, опущены, это просто пример работы с контектом. Полная версия
-                в репозитории проекта.
+                Шаг 2: Предоставление значения контекста
             </Typography>
-            <Typography paragraph variant="h6">
+            <Typography paragraph variant="caption">
+                * фрагменты кода, относящиеся конкретно к изменению темы для MUI, опущены, это
+                просто пример работы с контектом. Полная версия в репозитории проекта.
+            </Typography>
+            <Typography paragraph>
+                Следующим шагом нужно предоставить значение контекста внутри компонента-провайдера.
+                Компонент-провайдер обертывает дерево компонентов, которым нужен доступ к контексту.
+            </Typography>
+            <Typography paragraph variant="subtitle1">
                 Вариант 1. Использование провайдера в самом компоненте
             </Typography>
             <Typography paragraph>
-                Затем нужно предоставить значение контекста внутри компонента-провайдера.
-                Компонент-провайдер обертывает дерево компонентов, которым нужен доступ к контексту.
-                Пример: В этом примере используется ModeContext.Provider для предоставления значения
+                В этом примере используется ModeContext.Provider для предоставления значения
                 контекста. Значение value будет доступно всем дочерним компонентам, которые
                 подписаны на этот контекст.
             </Typography>
@@ -86,7 +91,7 @@ export default App;`}
                 />
             </Typography>
 
-            <Typography paragraph variant="h6">
+            <Typography paragraph variant="subtitle1">
                 Вариант 2. Создание отдельного файла для провайдера
             </Typography>
             <Typography paragraph>
@@ -138,8 +143,9 @@ export default App;`}
             <Typography paragraph>
                 Теперь можно использовать хук useContext внутри функционального компонента, чтобы
                 получить доступ к значению контекста. В этом примере импортируем useContext из react
-                и вызываем его, передавая контекст MyContext. Хук useContext возвращает текущее
-                значение контекста, которое мы присваиваем переменной value.Пример:
+                и вызываем его, передавая контекст ModeContext. Хук useContext возвращает текущее
+                значение контекста, из которого с помощью деструктуризации мы получаем необходимые
+                нам значения. Пример:
             </Typography>
             <Typography paragraph>
                 <CodeBlock
@@ -171,28 +177,28 @@ export default ComponentA;`}
             </Typography>
             <Typography paragraph>
                 Есть еще один вариант подписаться на контекст в компонентах, где нужны переданные
-                значения. Для этого используется MyContext.Consumer.В этом примере используется
-                MyContext.Consumer для получения значения контекста и отображения его внутри
-                компонента. Значение контекста будет доступно внутри функции-рендерера в виде
-                аргумента.
+                значения. Для этого используется ModeContext.Consumer. Значение контекста будет
+                доступно внутри функции-рендерера в виде аргумента (тут снова использовали
+                деструктуризацию).
             </Typography>
             <Typography paragraph>
                 <CodeBlock
                     language={'jsx'}
                     text={`// ComponentA.jsx
 import React from 'react';
-import MyContext from './MyContext';
+import ModeContext from '../contexts/ModeContext.js';
 import ComponentB from './ComponentB';
 
 function ComponentA() {
   return (
     <div>
       <h2>Component A</h2>
-      <MyContext.Consumer>
-        {(value) => (
-          <p>Received value from Context: {value}</p>
+      <ModeContext.Consumer>
+        {({ toggleColorMode, mode }) => (
+            <p>Текущая тема: {mode}</p>
+            <button onClick={toggleColorMode}>Изменить тему</button>
         )}
-      </MyContext.Consumer>
+      </ModeContext.Consumer>
       <ComponentB />
     </div>
   );
