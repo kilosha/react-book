@@ -18,6 +18,7 @@ import HOC from './pages/HOC';
 // создать index для pages
 
 import ModeProvider from './providers/ModeProvider.js';
+import Roadmap from './pages/Roadmap';
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                 <nav>
                     <Routes>
                         <Route path="/" element={<Home />}>
+                            <Route path="/" element={<Roadmap />} />
                             <Route path="/virtualDOM" element={<VirtualDOM />} />
                             <Route path="/components" element={<Components />} />
                             <Route path="/props" element={<Props />} />

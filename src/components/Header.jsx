@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Toolbar, Typography, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/material/styles';
@@ -22,6 +23,12 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 const Header = ({ open, handleDrawerOpen, drawerWidth }) => {
+    const navigate = useNavigate();
+
+    const navToHomePage = () => {
+        navigate('/');
+    };
+
     return (
         <AppBar position="fixed" open={open} drawerWidth={drawerWidth}>
             <Toolbar>
@@ -33,7 +40,7 @@ const Header = ({ open, handleDrawerOpen, drawerWidth }) => {
                     sx={{ mr: 2, ...(open && { display: 'none' }) }}>
                     <MenuIcon />
                 </IconButton>
-                <Typography variant="h6" noWrap component="div">
+                <Typography variant="h6" noWrap component="div" onClick={navToHomePage}>
                     React book
                 </Typography>
             </Toolbar>
