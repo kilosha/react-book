@@ -101,7 +101,7 @@ const HOC = () => {
             <Typography paragraph variant="h5">
                 Примеры использования HOC
             </Typography>
-            <Typography paragraph variant="h4">
+            <Typography paragraph variant="h6">
                 1. Логирование
             </Typography>
             <Typography paragraph>
@@ -120,7 +120,7 @@ const withLogger = (WrappedComponent) => {
 };`}
                 />
             </Typography>
-            <Typography paragraph variant="h4">
+            <Typography paragraph variant="h6">
                 2. Аутентификация
             </Typography>
             <Typography paragraph>
@@ -140,7 +140,7 @@ const withLogger = (WrappedComponent) => {
 const AuthenticatedComponent = withAuth(ProfileComponent);`}
                 />
             </Typography>
-            <Typography paragraph variant="h4">
+            <Typography paragraph variant="h6">
                 3. Локализация
             </Typography>
             <Typography paragraph>
@@ -157,7 +157,7 @@ const AuthenticatedComponent = withAuth(ProfileComponent);`}
 const LocalizedProfile = withLocalization(ProfileComponent);`}
                 />
             </Typography>
-            <Typography paragraph variant="h4">
+            <Typography paragraph variant="h6">
                 4. Управление состоянием
             </Typography>
             <Typography paragraph>
