@@ -40,7 +40,12 @@ const Header = ({ open, handleDrawerOpen, drawerWidth }) => {
                     sx={{ mr: 2, ...(open && { display: 'none' }) }}>
                     <MenuIcon />
                 </IconButton>
-                <Typography variant="h6" noWrap component="div" onClick={navToHomePage}>
+                <Typography
+                    sx={{ cursor: 'pointer' }}
+                    variant="h6"
+                    noWrap
+                    component="div"
+                    onClick={navToHomePage}>
                     React book
                 </Typography>
             </Toolbar>

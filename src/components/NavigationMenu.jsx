@@ -19,7 +19,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
 }));
 
 const NavigationMenu = ({ open, handleDrawerClose, drawerWidth }) => {
@@ -73,6 +73,7 @@ const NavigationMenu = ({ open, handleDrawerClose, drawerWidth }) => {
                 anchor="left"
                 open={open}>
                 <DrawerHeader>
+                    <Typography>Содержание</Typography>
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                     </IconButton>
