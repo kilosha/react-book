@@ -29,7 +29,7 @@ function App() {
                 <nav>
                     <Routes>
                         <Route path="/" element={<Home />}>
-                            <Route path="/react-book" element={<Roadmap />} />
+                            <Route path="/" element={<Roadmap />} />
                             <Route path="/virtualDOM" element={<VirtualDOM />} />
                             <Route path="/components" element={<Components />} />
                             <Route path="/props" element={<Props />} />
