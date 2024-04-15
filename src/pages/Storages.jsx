@@ -80,7 +80,7 @@ console.log(myData); // Выводится "Hello, Masha!"`}
             <Typography paragraph variant="h6">
                 Зачем нужно хранилище в виде Cookies?
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 <List sx={{ margin: '0 20px' }}>
                     <ListItemText>
                         1. <b>Сохранение состояния:</b> Cookies позволяют хранить небольшие объемы
@@ -104,7 +104,7 @@ console.log(myData); // Выводится "Hello, Masha!"`}
             <Typography paragraph variant="h6">
                 Отличие от LocalStorage
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Local Storage и Cookies - это два разных механизма хранения данных на стороне
                 клиента, и у них есть несколько ключевых различий:
                 <List sx={{ margin: '0 20px' }}>

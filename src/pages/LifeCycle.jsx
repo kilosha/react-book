@@ -22,7 +22,7 @@ const LifeCycle = () => {
             <Typography variant="h5" paragraph>
                 Методы жизненного цикла в React можно разделить на следующие группы:
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Методы монтирования (Mounting Methods):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>constructor()</ListItemText>
@@ -33,7 +33,7 @@ const LifeCycle = () => {
                     <ListItemText sx={{ display: 'list-item' }}>componentDidMount()</ListItemText>
                 </List>
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Методы обновления (Updating Methods):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -46,7 +46,7 @@ const LifeCycle = () => {
                     <ListItemText sx={{ display: 'list-item' }}>componentDidUpdate()</ListItemText>
                 </List>
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Методы размонтирования (Unmounting Methods):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -54,7 +54,7 @@ const LifeCycle = () => {
                     </ListItemText>
                 </List>
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Методы обработки ошибок (Error Handling Methods):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>componentDidCatch()</ListItemText>
@@ -66,7 +66,7 @@ const LifeCycle = () => {
             <Typography variant="h5" paragraph>
                 Жизненный цикл классовых компонентов:
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Mounting (Монтирование):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -113,7 +113,7 @@ const LifeCycle = () => {
 }`}
                 />
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Updating (Обновление):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -152,7 +152,7 @@ const LifeCycle = () => {
 }`}
                 />
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Unmounting (Размонтирование):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -200,7 +200,7 @@ class WillUnmountExample extends React.Component {
 export default WillUnmountExample;`}
                 />
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 Error Handling (Обработка ошибок):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -317,7 +317,7 @@ useEffect(() => {
 }, []);`}
                 />
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 1. Mounting (Монтирование):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -328,7 +328,7 @@ useEffect(() => {
                     </ListItemText>
                 </List>
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 2. Updating (Обновление):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -344,7 +344,7 @@ useEffect(() => {
                     </ListItemText>
                 </List>
             </Typography>
-            <Typography variant="h6" paragraph>
+            <Typography variant="h6" paragraph component="div">
                 3. Unmounting (Размонтирование):
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
@@ -415,7 +415,7 @@ export default Example;`}
             <Typography paragraph>
                 В этом примере <b>useEffect</b> выполняется при изменении значения count, так как
                 count является зависимостью, переданной в массиве [count]. Когда count изменяется,
-                <b>useEffect</b> обновляет состояние message, отображая новое сообщение о счетчике.
+                <b> useEffect</b> обновляет состояние message, отображая новое сообщение о счетчике.
             </Typography>
         </div>
     );

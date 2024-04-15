@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Button } from '@mui/material';
 import { CodeBlock } from 'react-code-blocks';
+
 import ModeContext from '../contexts/ModeContext.js';
 
 const Context = () => {
@@ -22,7 +23,7 @@ const Context = () => {
                 привести к избыточности и усложнению кода. Он также делает компоненты более
                 зависимыми от их иерархии, что может затруднить их переиспользование и модификацию.
             </Typography>
-            <Typography paragraph variant="h5">
+            <Typography paragraph variant="h5" component="div">
                 Использование Context (на примере изменения темы этого приложения 😎):
                 <Button sx={{ ml: 1 }} onClick={toggleColorMode}>
                     Нажми меня (текущая тема: {mode})

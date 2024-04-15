@@ -9,7 +9,7 @@ const ModeProvider = ({ children }) => {
     const theme = createTheme({
         palette: {
             mode,
-        },
+        }
     });
 
     React.useEffect(() => {

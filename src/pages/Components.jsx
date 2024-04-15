@@ -16,7 +16,7 @@ const Components = () => {
                 называемые «пропсы») и возвращают React-элементы, описывающие, что мы хотим увидеть
                 на экране.
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Компонента должна себя вести как чистая функция. “Чистой” называется функция,
                 которая:
                 <List sx={{ margin: '0 20px' }}>

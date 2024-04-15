@@ -15,7 +15,7 @@ const Refs = () => {
                 Refs (далее просто “ссылки”) предоставляет способ доступа к DOM-узлам или
                 React-элементам, созданным в методе render().
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Есть несколько хороших примеров использования ссылок:
                 <List sx={{ margin: '0 20px' }}>
                     <ListItemText>1. Управление фокусом, выделение текста.</ListItemText>

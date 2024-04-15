@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Toolbar, Typography, IconButton } from '@mui/material';
+import { Toolbar, Typography, IconButton, AppBar as MuiAppBar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/material/styles';
-import MuiAppBar from '@mui/material/AppBar';
+
+import MenuContext from '../contexts/MenuContext';
 
 const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'open',
+    shouldForwardProp: (prop) => prop !== 'open' && prop !== 'drawerWidth',
 })(({ theme, open, drawerWidth }) => ({
     transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.sharp,
@@ -22,8 +23,9 @@ const AppBar = styled(MuiAppBar, {
     }),
 }));
 
-const Header = ({ open, handleDrawerOpen, drawerWidth }) => {
+const Header = () => {
     const navigate = useNavigate();
+    const { open, drawerWidth, handleDrawerOpen } = useContext(MenuContext);
 
     const navToHomePage = () => {
         navigate('/');

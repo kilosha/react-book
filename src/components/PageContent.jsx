@@ -1,27 +1,27 @@
 import React, { useContext } from 'react';
-import SomeContext from '../contexts/SomeContext';
 import { Outlet } from 'react-router-dom';
-
 import { styled, useTheme } from '@mui/material/styles';
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-    ({ theme, open, drawerWidth }) => ({
-        flexGrow: 1,
-        padding: theme.spacing(3),
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        marginLeft: 0,
-        ...(open && {
-            transition: theme.transitions.create('margin', {
-                easing: theme.transitions.easing.easeOut,
-                duration: theme.transitions.duration.enteringScreen,
-            }),
-            marginLeft: `${drawerWidth}px`,
-        }),
+import MenuContext from '../contexts/MenuContext';
+
+const Main = styled('main', {
+    shouldForwardProp: (prop) => prop !== 'open' && prop !== 'drawerWidth',
+})(({ theme, open, drawerWidth }) => ({
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
     }),
-);
+    marginLeft: 0,
+    ...(open && {
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+        marginLeft: `${drawerWidth}px`,
+    }),
+}));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -34,7 +34,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const PageContent = () => {
     const theme = useTheme();
-    const { open, drawerWidth } = useContext(SomeContext);
+    const { open, drawerWidth } = useContext(MenuContext);
 
     return (
         <Main open={open} drawerWidth={drawerWidth} theme={theme}>

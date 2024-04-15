@@ -667,7 +667,7 @@ const App = () => {
                 "/dashboard".
             </Typography>
 
-            <Typography variant="h5" paragraph>
+            <Typography variant="h5" paragraph component="div">
                 Итого:
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>

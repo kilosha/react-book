@@ -28,7 +28,7 @@ const HOC = () => {
             <Typography paragraph variant="h5">
                 Проблемы, которые решает HOC
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 HOC решает несколько проблем в разработке React-приложений:
                 <List sx={{ margin: '0 20px' }}>
                     <ListItemText>
@@ -56,7 +56,7 @@ const HOC = () => {
                 Создание HOC включает в себя определение функции, которая принимает компонент и
                 возвращает новый компонент.
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Создание HOC - это простой процесс:
                 <List sx={{ margin: '0 20px' }}>
                     <ListItemText>

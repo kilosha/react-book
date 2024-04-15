@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, List, ListItemText } from '@mui/material';
 import { CodeBlock } from 'react-code-blocks';
 
@@ -28,7 +27,7 @@ const VirtualDOM = () => {
                 состоянию компонентов. Затем React сравнивает это виртуальное дерево с реальным DOM
                 и определяет, какие изменения необходимо внести.
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Теперь, почему это так важно? Вот несколько причин:
                 <List sx={{ margin: '0 20px' }}>
                     <ListItemText>
@@ -68,7 +67,7 @@ const VirtualDOM = () => {
                 значение или получает обновленные данные с сервера, React должен обновить
                 пользовательский интерфейс, чтобы отразить эти изменения.
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Reconciliation происходит по следующему сценарию:
                 <List sx={{ margin: '0 20px' }}>
                     <ListItemText>
@@ -108,9 +107,10 @@ const VirtualDOM = () => {
                 Предположим, у нас есть компонент Counter, который отображает значение счетчика и
                 имеет кнопки для увеличения и уменьшения значения:
             </Typography>
-            <CodeBlock
-                language={'js'}
-                text={`import React, { useState } from 'react';
+            <Typography paragraph>
+                <CodeBlock
+                    language={'js'}
+                    text={`import React, { useState } from 'react';
 
 function Counter() {
     const [count, setCount] = useState(0);
@@ -133,8 +133,10 @@ function Counter() {
 }
 
 export default Counter;`}
-            />
-            <Typography paragraph>
+                />
+            </Typography>
+
+            <Typography paragraph component="div">
                 Теперь давай рассмотрим, как происходит reconciliation при взаимодействии с
                 компонентом:
                 <List sx={{ margin: '0 20px' }}>

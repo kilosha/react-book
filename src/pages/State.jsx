@@ -26,7 +26,7 @@ const State = () => {
 const [state, setState] = useState(initialState);`}
                 />
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Хук useState позволяет функциональным компонентам в React добавлять локальное
                 состояние. Он возвращает возвращает массив с парой значений: текущее значение
                 состояния и функцию для его обновления. При вызове функции обновления, React

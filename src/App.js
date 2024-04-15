@@ -1,7 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
-import Home from './pages/Home.jsx';
+
+import Home from './pages/Home';
+import Roadmap from './pages/Roadmap';
 import VirtualDOM from './pages/VirtualDOM';
 import Components from './pages/Components';
 import Props from './pages/Props';
@@ -18,7 +20,7 @@ import HOC from './pages/HOC';
 // создать index для pages
 
 import ModeProvider from './providers/ModeProvider.js';
-import Roadmap from './pages/Roadmap';
+
 
 function App() {
     return (

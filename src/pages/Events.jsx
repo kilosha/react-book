@@ -36,7 +36,7 @@ const Events = () => {
             <Typography paragraph variant="h5">
                 Несколько наиболее часто используемых событий и примеры их применения:
             </Typography>
-            <Typography paragraph variant="h6">
+            <Typography paragraph variant="h6" component="div">
                 1. onClick (клик)
                 <Button
                     sx={{ ml: 1, color: 'black', border: '1px solid black' }}
@@ -62,7 +62,7 @@ const Events = () => {
 }`}
                 />
             </Typography>
-            <Typography paragraph variant="h6">
+            <Typography paragraph variant="h6" component="div">
                 2. onChange (изменение):
                 <Input
                     sx={{ ml: 1, color: 'black', border: '1px solid black' }}
@@ -98,7 +98,10 @@ const Events = () => {
                 Событие onSubmit возникает при отправке формы. Оно позволяет выполнить действия,
                 связанные с отправкой данных формы на сервер.
             </Typography>
-            <Typography paragraph sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography
+                paragraph
+                sx={{ display: 'flex', justifyContent: 'space-between' }}
+                component="div">
                 <CodeBlock
                     language={'js'}
                     text={`const MyComponent = () => {
@@ -134,7 +137,10 @@ const Events = () => {
                 использоваться для отображения дополнительной информации или изменения состояния
                 компонента при наведении.
             </Typography>
-            <Typography paragraph sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography
+                paragraph
+                sx={{ display: 'flex', justifyContent: 'space-between' }}
+                component="div">
                 <CodeBlock
                     language={'js'}
                     text={`const MyComponent = () => {
@@ -160,7 +166,10 @@ const Events = () => {
                 реагировать на определенные комбинации клавиш или выполнять действия на основе
                 нажатых клавиш.
             </Typography>
-            <Typography paragraph sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography
+                paragraph
+                sx={{ display: 'flex', justifyContent: 'space-between' }}
+                component="div">
                 <CodeBlock
                     language={'js'}
                     text={`const MyComponent = () => {

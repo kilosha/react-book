@@ -11,7 +11,7 @@ const Forms = () => {
                 Формы - это часть большинства веб-приложений. Однако их создание и управление может
                 быть сложным для новичков.
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 В React существует несколько способов использования форм в приложении, в зависимости
                 от потребностей и предпочтений разработчика. Ниже перечислены основные варианты
                 использования форм в React приложении:
@@ -128,7 +128,7 @@ const Test = () => {
                 <b>register</b> - это функция из библиотеки react-hook-form, которая используется
                 для связывания инпутов и других элементов формы с состоянием и валидацией формы.
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Когда ты вызываешь register('fieldName', validationRules), библиотека
                 react-hook-form выполняет следующие действия:
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
@@ -227,7 +227,7 @@ const Test = () => {
             <Typography variant="h6" paragraph>
                 Controller
             </Typography>
-            <Typography paragraph>
+            <Typography paragraph component="div">
                 Вот несколько ситуаций, когда стоит использовать Controller:
                 <List sx={{ margin: '0 20px', listStyle: 'disc' }}>
                     <ListItemText sx={{ display: 'list-item' }}>
