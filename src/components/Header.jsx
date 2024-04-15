@@ -28,7 +28,7 @@ const Header = () => {
     const { open, drawerWidth, handleDrawerOpen } = useContext(MenuContext);
 
     const navToHomePage = () => {
-        navigate('/');
+        navigate('/react-book/roadmap');
     };
 
     return (

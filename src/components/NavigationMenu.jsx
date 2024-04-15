@@ -56,28 +56,28 @@ const NavigationMenu = () => {
                 <Divider />
                 <List>
                     {[
-                        { title: 'VirtualDOM', link: '/virtualDOM' },
-                        { title: 'Components', link: '/components' },
-                        { title: 'Props', link: '/props' },
-                        { title: 'State(useState)', link: '/state' },
-                        { title: 'LifeCycle(useEffect)', link: '/lifeCycle' },
-                        { title: 'Events', link: '/events' },
+                        { title: 'VirtualDOM', link: 'virtualDOM' },
+                        { title: 'Components', link: 'components' },
+                        { title: 'Props', link: 'props' },
+                        { title: 'State(useState)', link: 'state' },
+                        { title: 'LifeCycle(useEffect)', link: 'lifeCycle' },
+                        { title: 'Events', link: 'events' },
                         {
                             title: 'Refs,Fragment,key,React.memo, useMemo',
-                            link: '/refs,Fragment,key,React.memo,useMemo',
+                            link: 'refs,Fragment,key,React.memo,useMemo',
                         },
-                        { title: 'Context(useContext)', link: '/context' },
-                        { title: 'React Router V6', link: '/react-router' },
-                        { title: 'Forms', link: '/forms' },
-                        { title: 'Storages', link: '/storages' },
-                        { title: 'HOC', link: '/hoc' },
+                        { title: 'Context(useContext)', link: 'context' },
+                        { title: 'React Router V6', link: 'react-router' },
+                        { title: 'Forms', link: 'forms' },
+                        { title: 'Storages', link: 'storages' },
+                        { title: 'HOC', link: 'hoc' },
                     ].map((item) => (
                         <ListItem key={item.title} disablePadding component={Link} to={item.link}>
                             <ListItemButton
                                 sx={{
                                     color: mode === 'light' ? 'black' : 'white',
                                 }}
-                                selected={item.link === location.pathname}>
+                                selected={`/react-book/${item.link}` === location.pathname}>
                                 <ListItemText primary={item.title} />
                             </ListItemButton>
                         </ListItem>
