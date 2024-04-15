@@ -28,20 +28,20 @@ function App() {
             <Box sx={{ display: 'flex' }}>
                 <nav>
                     <Routes>
-                        <Route path="/react-book" element={<Home />}>
-                            <Route path="/react-book/roadmap" element={<Roadmap />} />
-                            <Route path="/react-book/virtualDOM" element={<VirtualDOM />} />
-                            <Route path="/react-book/components" element={<Components />} />
-                            <Route path="/react-book/props" element={<Props />} />
-                            <Route path="/react-book/state" element={<State />} />
-                            <Route path="/react-book/lifeCycle" element={<LifeCycle />} />
-                            <Route path="/react-book/events" element={<Events />} />
-                            <Route path="/react-book/refs,Fragment,key,React.memo,useMemo" element={<Refs />} />
-                            <Route path="/react-book/context" element={<Context />} />
-                            <Route path="/react-book/react-router" element={<ReactRouter />} />
-                            <Route path="/react-book/forms" element={<Forms />} />
-                            <Route path="/react-book/storages" element={<Storages />} />
-                            <Route path="/react-book/hoc" element={<HOC />} />
+                        <Route path="/" element={<Home />}>
+                            <Route path="/react-book" element={<Roadmap />} />
+                            <Route path="/virtualDOM" element={<VirtualDOM />} />
+                            <Route path="/components" element={<Components />} />
+                            <Route path="/props" element={<Props />} />
+                            <Route path="/state" element={<State />} />
+                            <Route path="/lifeCycle" element={<LifeCycle />} />
+                            <Route path="/events" element={<Events />} />
+                            <Route path="/refs,Fragment,key,React.memo,useMemo" element={<Refs />} />
+                            <Route path="/context" element={<Context />} />
+                            <Route path="/react-router" element={<ReactRouter />} />
+                            <Route path="/forms" element={<Forms />} />
+                            <Route path="/storages" element={<Storages />} />
+                            <Route path="/hoc" element={<HOC />} />
                         </Route>
                         <Route path="*" element={<NotFound />} />
                     </Routes>
